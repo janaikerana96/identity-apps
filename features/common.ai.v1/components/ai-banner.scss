@@ -1,0 +1,73 @@
+/**
+ * Copyright (c) 2024, WSO2 LLC. (https://www.wso2.com).
+ *
+ * WSO2 LLC. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+.ai-banner {
+    &.hidden {
+        display: none;
+    }
+}
+
+.ai-banner {
+    background: #ffffff;
+    align-items: center;
+    background-repeat: no-repeat;
+    border: 1px solid #DCDAD8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding: 30px 25px;
+
+    &.collapsed, &.input {
+        flex-direction: column;
+    }
+
+    &.subscribed {
+        background-size: cover;
+        background-position: right center;
+    }
+
+    &.unsubscribed {
+        background-size: auto 270px, auto 520px;
+        background-position: calc(100% - 20px) -36px, right top;
+    }
+}
+
+.ai-banner-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+
+    .MuiChip-root {
+        margin-left: .5rem;
+        margin-bottom: .25rem;
+    }
+}
+
+.ai-banner-heading {
+    font-size: 19px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.ai-banner-sub-heading {
+    font-size: 15px;
+    font-weight: 400;
+    color: #8D91A3;
+}

@@ -1,0 +1,28 @@
+.console-settings-tabs {
+    .oxygen-tab-panel {
+        .list-layout {
+            margin-top: 2rem;
+        }
+    }
+
+    .console-roles-list, .administrators-list {
+        .top-action-panel {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 10px;
+
+            >.ui.grid {
+                flex-grow: 1;
+            }
+        }
+    }
+
+    .multi-option-radio-group {
+        gap: 40px;
+        margin: 20px 0;
+    }
+}

@@ -1,0 +1,97 @@
+{
+    "name": "react-components",
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "modules/react-components/src",
+    "projectType": "library",
+    "generators": {},
+    "prefix": "@wso2is",
+    "tags": [],
+    "implicitDependencies": [
+        "core",
+        "theme"
+    ],
+    "targets": {
+        "build": {
+            "executor": "@nx/rollup:rollup",
+            "outputs": [
+                "{options.outputPath}"
+            ],
+            "options": {
+                "outputPath": "modules/react-components/dist",
+                "tsConfig": "modules/react-components/tsconfig.lib.json",
+                "project": "modules/react-components/package.json",
+                "entryFile": "modules/react-components/src/index.ts",
+                "external": [
+                    "react/jsx-runtime"
+                ],
+                "format": [
+                    "esm",
+                    "cjs"
+                ],
+                "rollupConfig": "@nx/react/plugins/bundle-rollup",
+                "compiler": "babel",
+                "assets": [
+                    {
+                        "glob": "modules/react-components/README.md",
+                        "input": ".",
+                        "output": "."
+                    }
+                ],
+                "updateBuildableProjectDepsInPackageJson": true
+            }
+        },
+        "lint": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpm lint",
+                "cwd": "modules/react-components",
+                "parallel": false
+            }
+        },
+        "test": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpm test",
+                "cwd": "modules/react-components",
+                "parallel": false
+            }
+        },
+        "test-coverage": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "pnpm test -- --coverage --collect-coverage",
+                "cwd": "modules/react-components",
+                "parallel": false
+            }
+        },
+        "storybook": {
+            "executor": "@nx/storybook:storybook",
+            "options": {
+                "uiFramework": "@storybook/react",
+                "port": 6006,
+                "quiet": false,
+                "configDir": "modules/react-components/.storybook",
+                "docs": true
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        },
+        "build-storybook": {
+            "executor": "@nx/storybook:build",
+            "outputs": ["{options.outputDir}"],
+            "options": {
+                "uiFramework": "@storybook/react",
+                "configDir": "modules/react-components/.storybook",
+                "outputDir": "modules/react-components/dist/storybook"
+            },
+            "configurations": {
+                "ci": {
+                    "quiet": true
+                }
+            }
+        }
+    }
+}
