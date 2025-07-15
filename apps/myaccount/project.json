@@ -143,7 +143,7 @@
             "defaultConfiguration": "development",
             "options": {
                 "buildTarget": "myaccount:build-base",
-                "port": 9002,
+                "port": 9000,
                 "baseHref": "/myaccount/",
                 "open": true,
                 "hmr": true,

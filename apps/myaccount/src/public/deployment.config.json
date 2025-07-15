@@ -6,7 +6,7 @@
     "appBaseName": "myaccount",
     "clientID": "MY_ACCOUNT",
     "consoleApp": {
-        "origin": "https://localhost:9002",
+        "origin": "https://hml.id.gov.ao",
         "path": "/getting-started"
     },
     "idpConfigs": {
@@ -16,10 +16,10 @@
         "logoutEndpointURL": "${serverOrigin}/oidc/logout",
         "oidcSessionIFrameEndpointURL": "${serverOrigin}/oidc/checksession",
         "responseMode": "query",
-        "serverOrigin": "https://localhost:9002"
+        "serverOrigin": "https://hml.id.gov.ao"
     },
     "isSaas": false,
-    "loginCallbackPath": "/myaccount/login",
+    "loginCallbackPath": "/login",
     "logoutCallbackPath": "",
     "proxyContextPath": "",
     "routePaths": {
@@ -27,7 +27,7 @@
         "login": "",
         "logout": "/logout"
     },
-    "serverOrigin": "https://localhost:9002",
+    "serverOrigin": "https://hml.id.gov.ao",
     "session": {
         "checkSessionInterval": 3.0,
         "sessionRefreshTimeOut": 300.0,
